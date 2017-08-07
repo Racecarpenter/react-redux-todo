@@ -28,16 +28,24 @@ export class App extends Component {
   render() {
     let btnStyle = {
       float:"right"
+    };
+    let input = {
+      width: 400,
+      textAlign: 'center'
+    }
+    let row = {
+      margin: '0px auto',
+      width: 400
     }
     return (
     <div className="App">
     <Header />
       <div className="row">
         <form className="col s12" onSubmit={this.handleSubmit}>
-          <div className="row">
-            <div className="input-field col s12">
-              <input id="textarea1" className="materialize-textarea" onChange={this.handleChange} value={this.state.value}/>
-              <button className="btn" style={btnStyle}>Do it</button>
+          <div className="row" style={row}>
+            <div className="input-field col s12" style={input}>
+              <input id="textarea1" className="materialize-textarea" onChange={this.handleChange} value={this.state.value} placeholder="New To Do"/>
+              <button className="btn green" style={btnStyle}>To Do</button>
             </div>
           </div>
         </form>

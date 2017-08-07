@@ -10,13 +10,16 @@ export class TodoList extends Component {
     let ElseStyle = {
       fontFamily:"cursive",
       fontSize:40,
-      textAlign: 'center'
+      textAlign: 'center',
+      paddingBottom: 53,
+      paddingTop: 60
     };
     let center = {
       margin: '0px auto',
       textAlign: 'center',
       width: 500
-    }
+    };
+
     if(this.props.todos.length>0) {
       const theTodos = this.props.todos.map(todo => {
         console.log('yo',todo.title)
@@ -41,7 +44,7 @@ export class TodoList extends Component {
     } else {
       return (
         <div className="container" style={ElseStyle}>
-          <h3>List some todos, pussy</h3>
+          <h3>Do it</h3>
         </div>
       )
     }
